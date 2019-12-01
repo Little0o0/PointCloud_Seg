@@ -37,7 +37,8 @@ results (copy the latest execution result to a new directory).
 
 
 def parse_path(*paths):
-    return abspath(expanduser(join(*paths)))
+    #It's used For add user dir
+    return abspath(expanduser(join(*paths))) 
 
 
 if __name__ == "__main__":

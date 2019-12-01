@@ -75,7 +75,7 @@ def load_dataset_h5(dir, data_conf, train_load_policy="normal", test_load_policy
     def _h5_generator(filepath, policy):
         f = h5py.File(filepath)
         if policy == "normal":
-            for points, label in zip(f["data"], f["label"]):
+            for points, label in zip(f["data"], f["label"]): # points是一个二维矩阵，label是[num]
                 yield points, label
         else:
             assert False, "random policy is not supported"
